@@ -1,6 +1,6 @@
 os: osx
 osx_image: xcode9
-language: swift
+language: objective-c
 xcode_project: ios-travis-sample.xcodeproj
 xcode_scheme: ios-travis-sample
 
