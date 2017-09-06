@@ -5,4 +5,4 @@ xcode_project: ios-travis-sample.xcodeproj
 xcode_scheme: ios-travis-sample
 
 script:
-- xcodebuild clean test -project 'ios-travis-sample.xcodeproj' -scheme "ios-travis-sample" -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0'
+- xcodebuild clean build test -project 'ios-travis-sample.xcodeproj' -scheme "ios-travis-sample" -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0'
