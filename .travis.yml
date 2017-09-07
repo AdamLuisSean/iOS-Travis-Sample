@@ -6,11 +6,11 @@ xcode_scheme: ios-travis-sample
 
 matrix:
   include: # More Emulator API levels to build in parallel
-    - env: OS=11.0
+    - env: DEVICE=iPhone 7
   allow_failures:
-    - env: OS=10.0
-    - env: OS=10.1
+    - env: DEVICE=iPhone 6
+    - env: DEVICE=iPhone 7 Plus
   fast_finish: false
 
 script:
-- xcodebuild clean build test -project 'ios-travis-sample.xcodeproj' -scheme "ios-travis-sample" -destination 'platform=iOS Simulator,name=iPhone 7,OS=${OS}'
+- xcodebuild clean build test -project 'ios-travis-sample.xcodeproj' -scheme "ios-travis-sample" -destination 'platform=iOS Simulator,name=${DEVICE},OS=11.0'
