@@ -4,13 +4,5 @@ language: objective-c
 xcode_project: ios-travis-sample.xcodeproj
 xcode_scheme: ios-travis-sample
 
-matrix:
-  include: # More Emulator API levels to build in parallel
-    - env: DEVICE=iPhone 7
-  allow_failures:
-    - env: DEVICE=iPhone 6
-    - env: DEVICE=iPhone 7 Plus
-  fast_finish: false
-
 script:
-- xcodebuild clean build test -project 'ios-travis-sample.xcodeproj' -scheme "ios-travis-sample" -destination 'platform=iOS Simulator,name=${DEVICE},OS=11.0'
+- xcodebuild clean build test -project 'ios-travis-sample.xcodeproj' -scheme "ios-travis-sample" -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0'
